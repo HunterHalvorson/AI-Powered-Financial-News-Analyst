@@ -1,0 +1,36 @@
+# virtual environment
+venv/
+env/
+
+# environment variables
+.env
+
+# Chroma persisted data (can be large)
+chroma_db/
+
+# SQLite database
+*.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# pytest cache
+.pytest_cache/
+
+# frontend dependencies
+frontend/node_modules/
+
+# frontend build output
+frontend/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
