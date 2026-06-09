@@ -23,3 +23,4 @@ class Article(Base):
   published_at = Column(DateTime, nullable=False)
   #  stores the link to the full article, used later for citation cards in the UI.
   url = Column(String, nullable=False)
+  ticker = Column(String, nullable=False)
