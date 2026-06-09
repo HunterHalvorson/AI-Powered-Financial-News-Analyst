@@ -2,6 +2,28 @@
   Entry Point
     - This file creates and configures the FastAPI app
     - front-door of the backend
+  
+  API
+    - a set of URLs your frontend can call to get or send data
+    - Instead of the react front-end doing all the work it can 
+      say to the backend, give me this data
+  
+  FastAPI
+    - Python framework that makes building these URLs easy
+    - define a function, slap a decorator on it (@app.post, @app.get) and FastAPI turns it into something the browser can call over HTTP
+
+  Middleware
+    - code that runs on every single request before it reaches the route functions
+    - CORS middleware checks "is this request coming from an allowed origin"
+  
+  REST
+    - set of conventions for how to design your API URLs and use HTTP methods
+      --> GET, POST< PUT, DELETE
+    - So instead of naming endpoints whatever you want. REST says name them after the resources and use the HTTP method to describe the action
+  
+  Endpoints
+    - A URL your app exposes that does something when you hit it.
+    - /health is an endpoint. /query will be an endpoint. Each one has a specific job — you call it, something happens, you get a response back.
 """
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -40,6 +62,6 @@ app.add_middleware(
 )
 
 
-@app.get("/health")
-def health():
-    return {"status": "ok"}
+# @app.get("/health")
+# def health():
+#     return {"status": "ok"}
