@@ -14,6 +14,7 @@ class Settings(BaseSettings):
   # no default means the app crashes if not provided
   newsapi_key: str
   openai_api_key: str
+  sqlite_url: str = "sqlite:///./news.db"
 
   # inner class that passes configuration options to BaseSettings.
   class Config:
